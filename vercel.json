@@ -1,0 +1,17 @@
+{
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "env": {
+    "DATABASE_URL": "@vercel_postgres_connection_string"
+  },
+  "crons": [],
+  "functions": {
+    "app/api/**/*": {
+      "maxDuration": 30
+    }
+  }
+}
